@@ -1,0 +1,124 @@
+{
+	"info": {
+		"_postman_id": "953b260a-4e74-408d-bdfa-89e64b928357",
+		"name": "test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "注册",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "8ab2652d-22cc-4b13-92ad-c5e41ff24258",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"username\": \"{{username}}\",\n\"password\": \"{{password}}\"\n\"email\":\"{{$guid}}\"\n}",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://test.lemonban.com/ningmengban/mvc/user/register.json",
+					"protocol": "http",
+					"host": [
+						"test",
+						"lemonban",
+						"com"
+					],
+					"path": [
+						"ningmengban",
+						"mvc",
+						"user",
+						"register.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "登陆",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "2ff45670-062b-4bc3-a548-837246781813",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"username\": \"{{username}}\",\n\"password\": \"{{password}}\"\n}",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://test.lemonban.com/ningmengban/mvc/user/login.json?username=13916686542&password=b5523f18a092325c5d19f0809c262563",
+					"protocol": "http",
+					"host": [
+						"test",
+						"lemonban",
+						"com"
+					],
+					"path": [
+						"ningmengban",
+						"mvc",
+						"user",
+						"login.json"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "13916686542"
+						},
+						{
+							"key": "password",
+							"value": "b5523f18a092325c5d19f0809c262563"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

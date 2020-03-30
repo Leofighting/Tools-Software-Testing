@@ -1,0 +1,79 @@
+{
+	"id": "14498243-e0c3-4839-b112-4c28825af4b2",
+	"name": "test",
+	"timestamp": "2020-03-30T09:52:30.852Z",
+	"collection_id": "953b260a-4e74-408d-bdfa-89e64b928357",
+	"folder_id": 0,
+	"environment_id": "c5445607-7458-4f75-ac13-2d9905a0dda8",
+	"totalPass": 2,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "71c18106-4054-4683-8b23-a2a178459af7",
+			"name": "注册",
+			"url": "http://test.lemonban.com/ningmengban/mvc/user/register.json",
+			"time": 49,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				49
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "8b7cf39e-7ab1-4522-9311-58bf0117b485",
+			"name": "登陆",
+			"url": "http://test.lemonban.com/ningmengban/mvc/user/login.json?username=13916686542&password=b5523f18a092325c5d19f0809c262563",
+			"time": 15,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				15
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"collection": {
+		"requests": [
+			{
+				"id": "71c18106-4054-4683-8b23-a2a178459af7",
+				"method": "POST"
+			},
+			{
+				"id": "8b7cf39e-7ab1-4522-9311-58bf0117b485",
+				"method": "POST"
+			}
+		]
+	}
+}
